@@ -54,13 +54,49 @@
                                                     <a class="btn btn-sm btn-warning" href="{{ route('categorias.edit',$categoria->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" onclick="return confirm('Estas seguro de eliminar el registro?')"  class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                                    <button type="submit"  class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
                             </table>
+                            @section('js')
+                            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                            @if (session('eliminar') == 'ok')
+                            <script>
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                                )
+                            </script>
+                            @endif
+                            <script>
+                                let forms = document.querySelectorAll('form')
+            
+                                forms.forEach(form => {
+                                    form.addEventListener('submit', (event) => {
+                                        event.preventDefault()
+                                        Swal.fire({
+                                            title: 'Are you sure?',
+                                            text: "You won't be able to revert this!",
+                                            icon: 'warning',
+                                            showCancelButton: true,
+                                            confirmButtonColor: '#3085d6',
+                                            cancelButtonColor: '#d33',
+                                            confirmButtonText: 'Yes, delete it!'
+                                            }).then((result) => {
+                                            if (result.isConfirmed) {
+
+                                                form.submit();
+                                            }
+                                            })
+
+                                         })
+                                     })
+                             </script>
+                             @endsection
                         </div>
                     </div>
                 </div>
