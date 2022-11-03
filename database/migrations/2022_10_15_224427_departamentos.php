@@ -18,6 +18,9 @@ return new class extends Migration
             $table->bigIncrements('idDepartamento');
             $table->string('nombreDepa');
             $table->timestamps();
+
+
+       
         });
     }
 

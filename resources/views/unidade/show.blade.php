@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $unidade->name ?? 'Mostrar Unidad' }}
+    {{ $unidade->name ?? 'Show Unidade' }}
 @endsection
 
 @section('content')
@@ -11,22 +11,34 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Mostar Unidad</span>
+                            <span class="card-title">Show Unidade</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('unidades.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('unidades.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>idUnidad:</strong>
+                            <strong>Idunidad:</strong>
                             {{ $unidade->idUnidad }}
                         </div>
                         <div class="form-group">
                             <strong>Categoria Id:</strong>
                             {{ $unidade->categoria_id }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Tracciones Id:</strong>
+                            {{ $unidade->tracciones_id }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Combustibles Id:</strong>
+                            {{ $unidade->combustibles_id }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Estados Id:</strong>
+                            {{ $unidade->estados_id }}
                         </div>
                         <div class="form-group">
                             <strong>Placa:</strong>
@@ -49,14 +61,6 @@
                             {{ $unidade->color }}
                         </div>
                         <div class="form-group">
-                            <strong>Traccion:</strong>
-                            {{ $unidade->traccion }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Combustible:</strong>
-                            {{ $unidade->combustible }}
-                        </div>
-                        <div class="form-group">
                             <strong>Ayofabricacion:</strong>
                             {{ $unidade->ayoFabricacion }}
                         </div>
@@ -73,16 +77,12 @@
                             {{ $unidade->valorHacienda }}
                         </div>
                         <div class="form-group">
-                            <strong>Estado:</strong>
-                            {{ $unidade->estado }}
+                            <strong>Rvt:</strong>
+                            {{ $unidade->RVT }}
                         </div>
                         <div class="form-group">
                             <strong>Descripcion:</strong>
                             {{ $unidade->descripcion }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Observacion:</strong>
-                            {{ $unidade->observacion }}
                         </div>
 
                     </div>

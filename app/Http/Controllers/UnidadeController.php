@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Unidade;
 use App\Models\Categoria;
+use App\Models\Traccione;
+use App\Models\Combustible;
+use App\Models\Estado;
 use Illuminate\Http\Request;
 
 /**
@@ -34,7 +37,10 @@ class UnidadeController extends Controller
     {
         $unidade = new Unidade();
         $categorias = Categoria::pluck('nombre','id'); 
-        return view('unidade.create', compact('unidade','categorias'));
+        $tracciones = Traccione::pluck('nombreTraccion','idTraccion'); 
+        $combustibles = Combustible::pluck('nombreCombustibles','idCombustibles');
+        $estados = Estado::pluck('nombreEstados','idEstados');
+        return view('unidade.create', compact('unidade','categorias','tracciones','combustibles','estados'));
     }
 
     /**
@@ -50,38 +56,39 @@ class UnidadeController extends Controller
         $unidade = Unidade::create($request->all());
 
         return redirect()->route('unidades.index')
-            ->with('success', 'Unidad creada correctamente.');
+            ->with('success', 'Unidade created successfully.');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int $idUnidad
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($idUnidad)
+    public function show($id)
     {
-        $unidade = Unidade::find($idUnidad);
+        $unidade = Unidade::find($id);
 
         return view('unidade.show', compact('unidade'));
-
-
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $idUnidad
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($idUnidad)
+    public function edit($id)
     {
-        $unidade = Unidade::find($idUnidad);
+        $unidade = Unidade::find($id);
         $categorias = Categoria::pluck('nombre','id'); 
-        return view('unidade.edit', compact('unidade','categorias'));
+        $tracciones = Traccione::pluck('nombreTraccion','idTraccion'); 
+        $combustibles = Combustible::pluck('nombreCombustibles','idCombustibles');
+        $estados = Estado::pluck('nombreEstados','idEstados');
+        return view('unidade.edit', compact('unidade','categorias','tracciones','combustibles','estados'));
     }
 
-       /**
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
@@ -95,19 +102,19 @@ class UnidadeController extends Controller
         $unidade->update($request->all());
 
         return redirect()->route('unidades.index')
-            ->with('success', 'Unidad editada correctamente');
+            ->with('success', 'Unidade updated successfully');
     }
 
     /**
-     * @param int $idUnidad
+     * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
-    public function destroy($idUnidad)
+    public function destroy($id)
     {
-        $unidades = Unidade::find($idUnidad)->delete();
+        $unidade = Unidade::find($id)->delete();
 
         return redirect()->route('unidades.index')
-            ->with('success', 'Unidad eliminada correctamente');
+            ->with('success', 'Unidade deleted successfully');
     }
 }

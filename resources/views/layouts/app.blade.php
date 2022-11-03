@@ -31,10 +31,12 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                    <ul class="navbar-nav ml-auto">
+                   
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('unidades.index') }}">{{ __('Unidades') }}</a>
                         </li>
+                      
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('categorias.index') }}">{{ __('Categorias') }}</a>
                         </li>
@@ -45,9 +47,34 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('puestos.index') }}">{{ __('Puestos') }}</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('tlicencias.index') }}">{{ __('Tipo Licencias') }}</a>
+                            <a class="nav-link" href="{{ route('licencias.index') }}">{{ __('Licencias') }}</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('talleres.index') }}">{{ __('Talleres') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('preventivos.index') }}">{{ __('Preventivos') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('correctivos.index') }}">{{ __('Correctivos') }}</a>
+                        </li>
+                       
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Mantenimientos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <a class="dropdown-item" href="{{ route('preventivos.index') }}">{{ __('Preventivos') }}</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
