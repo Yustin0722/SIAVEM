@@ -16,8 +16,12 @@ return new class extends Migration
         //
         Schema::create('puestos', function (Blueprint $table) {
             $table->bigIncrements('idPuesto');
+            $table->bigInteger('id_Departamento')->unsigned();
             $table->string('nombrePuesto');
+            
             $table->timestamps();
+
+            $table->foreign('id_Departamento')->references('idDepartamento')->on('departamentos');
         });
     }
 

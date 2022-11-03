@@ -14,6 +14,16 @@ return new class extends Migration
     public function up()
     {
         //
+        Schema::create('talleres', function (Blueprint $table) {
+            $table->bigIncrements('idTaller');
+            $table->string('Contratacion');
+            $table->string('NombreTaller');
+            $table->string('DireccionTaller');
+            $table->string('DescripcionEsp');
+            $table->date('FechaVenTaller');
+        
+            $table->timestamps();
+        });
     }
 
     /**

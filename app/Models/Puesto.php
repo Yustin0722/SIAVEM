@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class Puesto
  *
  * @property $idPuesto
+ *  @property $id_Departamento
  * @property $nombrePuesto
  * @property $created_at
  * @property $updated_at
@@ -19,6 +20,7 @@ class Puesto extends Model
 {
   protected $primaryKey = 'idPuesto';    
     static $rules = [
+    'id_Departamento'=> 'required',     
 		'nombrePuesto' => 'required',
     ];
 
@@ -29,8 +31,11 @@ class Puesto extends Model
      *
      * @var array
      */
-    protected $fillable = ['idPuesto','nombrePuesto'];
+    protected $fillable = ['idPuesto','id_Departamento','nombrePuesto'];
 
-
+    public function departamento()
+    {
+        return $this->hasOne('App\Models\Departamento', 'idDepartamento', 'id_Departamento');
+    }
 
 }

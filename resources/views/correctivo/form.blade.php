@@ -1,0 +1,44 @@
+<div class="box box-info padding-1">
+    <div class="box-body">
+        
+    <div class="form-group">
+            {{ Form::label('Placa') }}
+            {{ Form::select('unidad_id', $unidade , $correctivo->unidad_id, ['class' => 'form-control' . ($errors->has('unidad_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione ']) }}
+            {!! $errors->first('unidad_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Taller') }}
+            {{ Form::select('taller_id',$talleres ,  $correctivo->taller_id, ['class' => 'form-control' . ($errors->has('taller_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione ']) }}
+            {!! $errors->first('taller_id', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Fecha Salida') }}
+            {{ Form::date('FechaSalida',  $correctivo->FechaSalida, ['class' => 'form-control' . ($errors->has('FechaSalida') ? ' is-invalid' : ''), 'placeholder' => '']) }}
+            {!! $errors->first('FechaSalida', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Fecha Reingreso') }}
+            {{ Form::date('FechaReingreso',  $correctivo->FechaReingreso, ['class' => 'form-control' . ($errors->has('FechaReingreso') ? ' is-invalid' : ''), 'placeholder' => '']) }}
+            {!! $errors->first('FechaReingreso', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Horimetro') }}
+            {{ Form::text('Horimetro', $correctivo->Horimetro, ['class' => 'form-control' . ($errors->has('Horimetro') ? ' is-invalid' : ''), 'placeholder' => 'Horimetro']) }}
+            {!! $errors->first('Horimetro', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Detalle') }}
+            {{ Form::text('Detalle', $correctivo->Detalle, ['class' => 'form-control' . ($errors->has('Detalle') ? ' is-invalid' : ''), 'placeholder' => 'Detalle']) }}
+            {!! $errors->first('Detalle', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('Monto') }}
+            {{ Form::text('Monto', $correctivo->Monto, ['class' => 'form-control' . ($errors->has('Monto') ? ' is-invalid' : ''), 'placeholder' => 'Monto']) }}
+            {!! $errors->first('Monto', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+
+    </div>
+    <div class="box-footer mt20">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</div>

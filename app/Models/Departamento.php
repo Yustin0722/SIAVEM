@@ -31,8 +31,11 @@ class Departamento extends Model
      *
      * @var array
      */
-    protected $fillable = ['idDepartamento','nombreDepa'];
+    protected $fillable = ['nombreDepa'];
 
-
+    public function puestos()
+    {
+        return $this->hasMany('App\Models\Puesto', 'id_Departamento', 'idDepartamento');
+    }
 
 }

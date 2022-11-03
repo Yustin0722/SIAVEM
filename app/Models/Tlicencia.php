@@ -30,8 +30,12 @@ class Tlicencia extends Model
      *
      * @var array
      */
-    protected $fillable = ['idTL','nombreTL'];
+    protected $fillable = ['nombreTL'];
 
 
+   public function licencia()
+    {
+        return $this->hasMany('App\Models\Licencia', 'idTL', 'idLicencia');
+    }
 
 }
