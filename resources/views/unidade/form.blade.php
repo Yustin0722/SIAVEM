@@ -76,9 +76,10 @@
             {{ Form::text('descripcion', $unidade->descripcion, ['class' => 'form-control' . ($errors->has('descripcion') ? ' is-invalid' : ''), 'placeholder' => 'Descripcion de la Unidad']) }}
             {!! $errors->first('descripcion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-
-    </div>
+        </br>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <a class="btn btn-danger" href="{{ route('categorias.index') }}"> Atras</a>
+
     </div>
 </div>

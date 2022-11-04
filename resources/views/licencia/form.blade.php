@@ -19,8 +19,10 @@
             <input type="file" name="FotoLicencia" value="" id="FotoLicencia">
             <br>
 
-    </div>
+            </br>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <a class="btn btn-danger" href="{{ route('categorias.index') }}"> Atras</a>
+
     </div>
 </div>

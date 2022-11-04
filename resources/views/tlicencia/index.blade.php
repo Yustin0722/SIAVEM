@@ -81,13 +81,14 @@
                                     form.addEventListener('submit', (event) => {
                                         event.preventDefault()
                                         Swal.fire({
-                                            title: 'Are you sure?',
-                                            text: "You won't be able to revert this!",
+                                            title: '¿Está seguro que desea eliminar?',
+                                            text: "¡No podrá revertir esto!",
                                             icon: 'warning',
+                                            cancelButtonText: "Cancelar",
                                             showCancelButton: true,
                                             confirmButtonColor: '#3085d6',
                                             cancelButtonColor: '#d33',
-                                            confirmButtonText: 'Yes, delete it!'
+                                            confirmButtonText: 'Eliminar'
                                             }).then((result) => {
                                             if (result.isConfirmed) {
 
