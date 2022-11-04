@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Home');
 });
 
 Auth::routes();
@@ -28,5 +28,5 @@ Route::resource('licencias', App\Http\Controllers\LicenciaController::class);
 Route::resource('talleres', App\Http\Controllers\TallereController::class);
 Route::resource('preventivos', App\Http\Controllers\PreventivoController::class);
 Route::resource('correctivos', App\Http\Controllers\CorrectivoController::class);
-Route::resource('unidades', App\Http\Controllers\UnidadeController::class);
+Route::resource('estados', App\Http\Controllers\EstadoController::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Preventivo</span>
+                        <span class="card-title">Editar Mantenimiento Preventivo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('preventivos.update', $preventivo->idPreventivo) }}"  role="form" enctype="multipart/form-data">

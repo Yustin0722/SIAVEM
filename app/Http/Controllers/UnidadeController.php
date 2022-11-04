@@ -56,7 +56,7 @@ class UnidadeController extends Controller
         $unidade = Unidade::create($request->all());
 
         return redirect()->route('unidades.index')
-            ->with('success', 'Unidade created successfully.');
+            ->with('success', 'Unidad creada correctamente');
     }
 
     /**
@@ -102,7 +102,7 @@ class UnidadeController extends Controller
         $unidade->update($request->all());
 
         return redirect()->route('unidades.index')
-            ->with('success', 'Unidade updated successfully');
+            ->with('success', 'Unidad editada correctamente');
     }
 
     /**
@@ -115,6 +115,6 @@ class UnidadeController extends Controller
         $unidade = Unidade::find($id)->delete();
 
         return redirect()->route('unidades.index')
-            ->with('success', 'Unidade deleted successfully');
+            ->with('success', 'Unidad eliminada correctamente');
     }
 }

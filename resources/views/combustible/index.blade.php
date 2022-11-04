@@ -62,6 +62,43 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            @section('js')
+                            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                            @if (session('eliminar') == 'ok')
+                            <script>
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                                )
+                            </script>
+                            @endif
+                            <script>
+                                let forms = document.querySelectorAll('form')
+            
+                                forms.forEach(form => {
+                                    form.addEventListener('submit', (event) => {
+                                        event.preventDefault()
+                                        Swal.fire({
+                                            title: '¿Está seguro que desea eliminar?',
+                                            text: "¡No podrá revertir esto!",
+                                            icon: 'warning',
+                                            cancelButtonText: "Cancelar",
+                                            showCancelButton: true,
+                                            confirmButtonColor: '#3085d6',
+                                            cancelButtonColor: '#d33',
+                                            confirmButtonText: 'Eliminar'
+                                            }).then((result) => {
+                                            if (result.isConfirmed) {
+
+                                                form.submit();
+                                            }
+                                            })
+
+                                         })
+                                     })
+                             </script>
+                             @endsection
                         </div>
                     </div>
                 </div>

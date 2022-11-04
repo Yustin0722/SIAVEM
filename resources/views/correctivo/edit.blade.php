@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Correctivo</span>
+                        <span class="card-title">Editar Mantenimiento Correctivo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('correctivos.update', $correctivo->idCorrectivo) }}"  role="form" enctype="multipart/form-data">

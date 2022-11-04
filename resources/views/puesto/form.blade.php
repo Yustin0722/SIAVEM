@@ -12,7 +12,7 @@
 
         <div class="form-group">
             {{ Form::label('Nombre Puesto') }}
-            {{ Form::text('nombrePuesto', $puesto->nombrePuesto, ['class' => 'form-control' . ($errors->has('nombrePuesto') ? ' is-invalid' : ''), 'placeholder' => '']) }}
+            {{ Form::text('nombrePuesto', $puesto->nombrePuesto, ['class' => 'form-control' . ($errors->has('nombrePuesto') ? ' is-invalid' : ''), 'placeholder' => 'Digite el nombre del puesto']) }}
             {!! $errors->first('nombrePuesto', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 

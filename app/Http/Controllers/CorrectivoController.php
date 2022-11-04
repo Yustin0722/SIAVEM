@@ -52,7 +52,7 @@ class CorrectivoController extends Controller
         $correctivo = Correctivo::create($request->all());
 
         return redirect()->route('correctivos.index')
-            ->with('success', 'Correctivo created successfully.');
+            ->with('success', 'Correctivo creado correctamente.');
     }
 
     /**
@@ -96,7 +96,7 @@ class CorrectivoController extends Controller
         $correctivo->update($request->all());
 
         return redirect()->route('correctivos.index')
-            ->with('success', 'Correctivo updated successfully');
+            ->with('success', 'Correctivo editado correctamente');
     }
 
     /**
@@ -109,6 +109,6 @@ class CorrectivoController extends Controller
         $correctivo = Correctivo::find($id)->delete();
 
         return redirect()->route('correctivos.index')
-            ->with('success', 'Correctivo deleted successfully');
+            ->with('success', 'Correctivo eliminado correctamente');
     }
 }

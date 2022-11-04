@@ -36,6 +36,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('unidades.index') }}">{{ __('Unidades') }}</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('tlicencias.index') }}">{{ __('TipoLicencia') }}</a>
+                        </li>
                       
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('categorias.index') }}">{{ __('Categorias') }}</a>
@@ -89,7 +93,7 @@
 
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                         </li>
                         @endif
                         @else
