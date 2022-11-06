@@ -52,7 +52,7 @@
 
                                             <td>
                                                 <form action="{{ route('departamentos.destroy',$departamento->idDepartamento) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('departamentos.show',$departamento->idDepartamento) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
+                                                   
                                                     <a class="btn btn-sm btn-warning" href="{{ route('departamentos.edit',$departamento->idDepartamento) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')

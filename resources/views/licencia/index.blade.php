@@ -56,7 +56,7 @@
 
                                             <td>
                                                 <form action="{{ route('licencias.destroy',$licencia->idLicencia) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('licencias.show',$licencia->idLicencia) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
+                                                 
                                                     <a class="btn btn-sm btn-warning" href="{{ route('licencias.edit',$licencia->idLicencia) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')

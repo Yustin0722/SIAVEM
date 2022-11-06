@@ -21,32 +21,14 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     </head>
-    <div class="container">
-    <br />
-    <br />
-    <br />
-    <br />
-
-
+<div class="container">
     <div class="row justify-content-center">
-        <a class="navbar-brand" href="#">
-
-        </a>
         <div class="col-md-8">
-
             <div class="card">
-
-                <div class="card-header"  style="text-align:center">
-                <a class="navbar-brand" href="#">
-                        <br>
-                        <img src="{{ asset('images/logos.png') }}" class="mx-auto d-block" height="150">
-                        <br />
-
-                    </a>    
-                {{ __('Registrarse') }}</div>
+                <div class="card-header">{{ __('Registrarse') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('regis') }}">
                         @csrf
 
                         <div class="row mb-3">
@@ -101,8 +83,9 @@
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary"> {{ __('Registrarse') }}</button>
-                                <a class="btn btn-danger" href="{{ route('login') }}"> Atras</a>
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Registrarse') }}
+                                </button>
                             </div>
                         </div>
                     </form>

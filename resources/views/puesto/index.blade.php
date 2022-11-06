@@ -50,7 +50,7 @@
 
                                             <td>
                                                 <form action="{{ route('puestos.destroy',$puesto->idPuesto) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('puestos.show',$puesto->idPuesto) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
+                            
                                                     <a class="btn btn-sm btn-warning" href="{{ route('puestos.edit',$puesto->idPuesto) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')

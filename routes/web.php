@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,19 +15,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Home');
+    return view('auth.login');
 });
+
+Route::resource('unidades', App\Http\Controllers\UnidadeController::class)->middleware('auth');
+Route::resource('categorias', App\Http\Controllers\CategoriaController::class)->middleware('auth');
+Route::resource('departamentos', App\Http\Controllers\DepartamentoController::class)->middleware('auth');
+Route::resource('puestos', App\Http\Controllers\PuestoController::class)->middleware('auth');
+Route::resource('tlicencias', App\Http\Controllers\TlicenciaController::class)->middleware('auth');
+Route::resource('licencias', App\Http\Controllers\LicenciaController::class)->middleware('auth');
+Route::resource('talleres', App\Http\Controllers\TallereController::class)->middleware('auth');
+Route::resource('preventivos', App\Http\Controllers\PreventivoController::class)->middleware('auth');
+Route::resource('correctivos', App\Http\Controllers\CorrectivoController::class)->middleware('auth');
+Route::resource('estados', App\Http\Controllers\EstadoController::class)->middleware('auth');
 
 Auth::routes();
 
-Route::resource('unidades', App\Http\Controllers\UnidadeController::class);
-Route::resource('categorias', App\Http\Controllers\CategoriaController::class);
-Route::resource('departamentos', App\Http\Controllers\DepartamentoController::class);
-Route::resource('puestos', App\Http\Controllers\PuestoController::class);
-Route::resource('tlicencias', App\Http\Controllers\TlicenciaController::class);
-Route::resource('licencias', App\Http\Controllers\LicenciaController::class);
-Route::resource('talleres', App\Http\Controllers\TallereController::class);
-Route::resource('preventivos', App\Http\Controllers\PreventivoController::class);
-Route::resource('correctivos', App\Http\Controllers\CorrectivoController::class);
-Route::resource('estados', App\Http\Controllers\EstadoController::class);
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
