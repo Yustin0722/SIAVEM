@@ -81,7 +81,7 @@
                                                     <a class="btn btn-sm btn-warning" href="{{ route('unidades.edit',$unidade->idUnidad) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                                   
                                                 </form>
                                             </td>
                                         </tr>

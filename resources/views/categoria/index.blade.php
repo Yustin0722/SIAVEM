@@ -50,7 +50,7 @@
                                             
                                             <td>
                                                 <form action="{{ route('categorias.destroy',$categoria->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('categorias.show',$categoria->id) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
+                                                  
                                                     <a class="btn btn-sm btn-warning" href="{{ route('categorias.edit',$categoria->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')

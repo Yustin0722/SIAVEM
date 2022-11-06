@@ -56,7 +56,7 @@
 
                                             <td>
                                                 <form action="{{ route('talleres.destroy',$tallere->idTaller) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('talleres.show',$tallere->idTaller) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
+                                                   
                                                     <a class="btn btn-sm btn-warning" href="{{ route('talleres.edit',$tallere->idTaller) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
