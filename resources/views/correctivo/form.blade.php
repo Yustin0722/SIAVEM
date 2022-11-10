@@ -40,7 +40,7 @@
         </br>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <a class="btn btn-danger" href="{{ route('categorias.index') }}"> Atras</a>
+        <a class="btn btn-danger" href="{{ route('correctivos.index') }}"> Atras</a>
 
     </div>
 </div>
