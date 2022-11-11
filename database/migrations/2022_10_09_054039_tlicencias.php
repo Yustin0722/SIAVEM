@@ -16,7 +16,7 @@ return new class extends Migration
         //
         Schema::create('tlicencias', function (Blueprint $table) {
             $table->bigIncrements('idTL');
-            $table->string('nombreTL');
+            $table->string('nombreTL')->nullable();
             $table->timestamps();
         });
     }

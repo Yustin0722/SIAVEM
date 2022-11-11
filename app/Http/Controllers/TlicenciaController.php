@@ -48,7 +48,7 @@ class TlicenciaController extends Controller
         $tlicencia = Tlicencia::create($request->all());
 
         return redirect()->route('tlicencias.index')
-            ->with('success', 'Tipo Licencia creada correctamente.');
+            ->with('success', 'Tlicencia created successfully.');
     }
 
     /**
@@ -57,9 +57,9 @@ class TlicenciaController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($idTL)
+    public function show($id)
     {
-        $tlicencia = Tlicencia::find($idTL);
+        $tlicencia = Tlicencia::find($id);
 
         return view('tlicencia.show', compact('tlicencia'));
     }
@@ -70,9 +70,9 @@ class TlicenciaController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($idTL)
+    public function edit($id)
     {
-        $tlicencia = Tlicencia::find($idTL);
+        $tlicencia = Tlicencia::find($id);
 
         return view('tlicencia.edit', compact('tlicencia'));
     }
@@ -91,7 +91,7 @@ class TlicenciaController extends Controller
         $tlicencia->update($request->all());
 
         return redirect()->route('tlicencias.index')
-            ->with('success', 'Tipo licencia editado correctamente');
+            ->with('success', 'Tlicencia updated successfully');
     }
 
     /**
@@ -99,11 +99,11 @@ class TlicenciaController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
-    public function destroy($idTL)
+    public function destroy($id)
     {
-        $tlicencia = Tlicencia::find($idTL)->delete();
+        $tlicencia = Tlicencia::find($id)->delete();
 
         return redirect()->route('tlicencias.index')
-            ->with('success', 'Tipo licencia eliminado correctamente');
+            ->with('success', 'Tlicencia deleted successfully');
     }
 }
