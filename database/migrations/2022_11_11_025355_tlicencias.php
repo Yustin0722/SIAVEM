@@ -14,6 +14,12 @@ return new class extends Migration
     public function up()
     {
         //
+        Schema::create('tlicencias', function (Blueprint $table) {
+            $table->bigIncrements('idTL');
+            $table->string('nombreTL')->nullable();
+            $table->timestamps();
+        });
+
     }
 
     /**

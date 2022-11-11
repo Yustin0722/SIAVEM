@@ -17,10 +17,9 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Tlicencia extends Model
 {
-  protected $primaryKey = 'idTL';   
+    	protected $primaryKey ='idTL';
     static $rules = [
-		
-		'nombreTL' => 'required',
+
     ];
 
     protected $perPage = 20;
@@ -30,12 +29,8 @@ class Tlicencia extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombreTL'];
+    protected $fillable = ['idTL','nombreTL'];
 
 
-   public function licencia()
-    {
-        return $this->hasMany('App\Models\Licencia', 'idTL', 'idLicencia');
-    }
 
 }

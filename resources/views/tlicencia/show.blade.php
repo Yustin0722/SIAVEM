@@ -11,21 +11,21 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Mostrar Tipo Licencia</span>
+                            <span class="card-title">Show Tlicencia</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('tlicencias.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('tlicencias.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Id:</strong>
+                            <strong>Idtl:</strong>
                             {{ $tlicencia->idTL }}
                         </div>
                         <div class="form-group">
-                            <strong> Tipo Licencia:</strong>
+                            <strong>Nombretl:</strong>
                             {{ $tlicencia->nombreTL }}
                         </div>
 

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::resource('unidades', App\Http\Controllers\UnidadeController::class)->middleware('auth');
@@ -28,7 +28,7 @@ Route::resource('talleres', App\Http\Controllers\TallereController::class)->midd
 Route::resource('preventivos', App\Http\Controllers\PreventivoController::class)->middleware('auth');
 Route::resource('correctivos', App\Http\Controllers\CorrectivoController::class)->middleware('auth');
 Route::resource('estados', App\Http\Controllers\EstadoController::class)->middleware('auth');
-
+Route::resource('empleados', App\Http\Controllers\EmpleadoController::class)->middleware('auth');
 Auth::routes();
 
 

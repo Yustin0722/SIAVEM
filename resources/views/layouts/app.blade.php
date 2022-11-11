@@ -63,8 +63,8 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                                 <a class="dropdown-item" href="{{ route('departamentos.index') }}">Departamento</a>
                                 <a class="dropdown-item" href="{{ route('puestos.index') }}">Puestos</a>
-                                <a class="dropdown-item" href="{{ route('licencias.index') }}">Licencias</a>
-
+                                <a class="dropdown-item" href="{{ route('empleados.index') }}">Empleados</a>
+                           
 
                             </div>
                         </li>
@@ -77,7 +77,7 @@
                                 <a class="dropdown-item" href="{{ route('categorias.index') }}">Categorias</a>
                                 <a class="dropdown-item" href="{{ route('unidades.index') }}">Unidades</a>
 
-
+                                
                             </div>
                         </li>
 
