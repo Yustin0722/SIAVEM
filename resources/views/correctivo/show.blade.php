@@ -14,7 +14,7 @@
                             <span class="card-title">Show Correctivo</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('correctivos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('correctivos.index') }}"> Atras</a>
                         </div>
                     </div>
 
