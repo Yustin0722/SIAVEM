@@ -11,34 +11,31 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Unidade</span>
+                            <span class="card-title">Mostrar Unidad</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('unidades.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('unidades.index') }}"> Atras</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
+                      
                         <div class="form-group">
-                            <strong>Idunidad:</strong>
-                            {{ $unidade->idUnidad }}
+                            <strong>Categoria:</strong>
+                            {{ $unidade->categoria->nombre  }}
                         </div>
                         <div class="form-group">
-                            <strong>Categoria Id:</strong>
-                            {{ $unidade->categoria_id }}
+                            <strong>Traccion:</strong>
+                            {{ $unidade->traccione->nombreTraccion }}
                         </div>
                         <div class="form-group">
-                            <strong>Tracciones Id:</strong>
-                            {{ $unidade->tracciones_id }}
+                            <strong>Combustible:</strong>
+                            {{ $unidade->combustible->nombreCombustibles }}
                         </div>
                         <div class="form-group">
-                            <strong>Combustibles Id:</strong>
-                            {{ $unidade->combustibles_id }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Estados Id:</strong>
-                            {{ $unidade->estados_id }}
+                            <strong>Estado:</strong>
+                            {{ $unidade->estado->nombreEstados }}
                         </div>
                         <div class="form-group">
                             <strong>Placa:</strong>
@@ -61,7 +58,7 @@
                             {{ $unidade->color }}
                         </div>
                         <div class="form-group">
-                            <strong>Ayofabricacion:</strong>
+                            <strong>Año fabricacion:</strong>
                             {{ $unidade->ayoFabricacion }}
                         </div>
                         <div class="form-group">
@@ -69,15 +66,15 @@
                             {{ $unidade->contratacion }}
                         </div>
                         <div class="form-group">
-                            <strong>Valoradqui:</strong>
+                            <strong>Valor Adquisitivo:</strong>
                             {{ $unidade->valorAdqui }}
                         </div>
                         <div class="form-group">
-                            <strong>Valorhacienda:</strong>
+                            <strong>Valor Hacienda:</strong>
                             {{ $unidade->valorHacienda }}
                         </div>
                         <div class="form-group">
-                            <strong>Rvt:</strong>
+                            <strong>RVT:</strong>
                             {{ $unidade->RVT }}
                         </div>
                         <div class="form-group">

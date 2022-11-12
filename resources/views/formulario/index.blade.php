@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Empleado
+    Formulario
 @endsection
 
 @section('content')
@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Empleado') }}
+                                {{ __('Solicitud de Gira') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('empleados.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
-                                  {{ __('Agregar Empleado') }}
+                                <a href="{{ route('formularios.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
+                                  {{ __('Hacer Solicitud') }}
                                 </a>
                               </div>
                         </div>
@@ -34,46 +34,42 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                       
-										<th>Departamento </th>
-										<th>Puesto</th>
-										<th>Nombre</th>
-										<th>Primer Apellido</th>
-										<th>Segundo Apellido</th>
-										<th>Fecha Nacimiento</th>
-										<th>Cedula</th>
-										<th>Telefono</th>
-										<th>Correo Institucional</th>
-										<th>Tipo Licencia</th>
-										<th>Fecha Vencimiento</th>
-										<th>Foto Licencia</th>
+                                     
+										<th>Codigo Solicitud</th>
+										<th>Vehiculo</th>
+										<th>Departamento</th>
+										<th>Responsable de la Gira</th>
+										<th>Objetivo</th>
+										<th>Numero Personas</th>
+										<th>Fecha Salida</th>
+										<th>Fecha Regreso</th>
+										<th>Lugar</th>
+										<th>Itinerario</th>
+										<th>Observaciones</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($empleados as $empleado)
+                                    @foreach ($formularios as $formulario)
                                         <tr>
-                                          
-											<td>{{$empleado->departamento->nombreDepa }}</td>
-											<td>{{ $empleado->Puesto }}</td>
-											<td>{{ $empleado->NombreEmple }}</td>
-											<td>{{ $empleado->Apellido1 }}</td>
-											<td>{{ $empleado->Apellido2 }}</td>
-											<td>{{ $empleado->FechaNacimiento }}</td>
-											<td>{{ $empleado->Cedula }}</td>
-											<td>{{ $empleado->Telefono }}</td>
-											<td>{{ $empleado->CorreoInstitucional }}</td>
-											<td>{{ $empleado->tlicencia->nombreTL }}</td>
-											<td>{{ $empleado->FechaVencimiento }}</td>
-											<td>
-                                            <img src="{{ asset('storage').'/'.$empleado->FotoLicencia }}" width="150" alt=""> 
-                                            </td>
+                                         
+											<td>{{ $formulario->idFormularios }}</td>
+											<td>{{ $formulario->categoria->nombre }}</td>
+											<td>{{ $formulario->departamento->nombreDepa }}</td>
+											<td>{{ $formulario->empleado->Cedula }}</td>
+											<td>{{ $formulario->Objetivo }}</td>
+											<td>{{ $formulario->NumePersonas }}</td>
+											<td>{{ $formulario->FechaSalida }}</td>
+											<td>{{ $formulario->FechaRegreso }}</td>
+											<td>{{ $formulario->Lugar }}</td>
+											<td>{{ $formulario->Itinerario }}</td>
+											<td>{{ $formulario->Observaciones }}</td>
 
                                             <td>
-                                                <form action="{{ route('empleados.destroy',$empleado->idEmpleados) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('empleados.show',$empleado->idEmpleados) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
-                                                    <a class="btn btn-sm btn-warning" href="{{ route('empleados.edit',$empleado->idEmpleados) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('formularios.destroy',$formulario->idFormularios) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('formularios.show',$formulario->idFormularios) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
+                                                    <a class="btn btn-sm btn-warning" href="{{ route('formularios.edit',$formulario->idFormularios) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
@@ -123,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $empleados->links() !!}
+                {!! $formularios->links() !!}
             </div>
         </div>
     </div>

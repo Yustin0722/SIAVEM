@@ -57,7 +57,7 @@ class EmpleadoController extends Controller
         Empleado::insert($empleado);
 
         return redirect()->route('empleados.index')
-            ->with('success', 'Empleado created successfully.');
+            ->with('success', 'Empleado creado correctamente.');
     }
 
     /**
@@ -109,7 +109,7 @@ class EmpleadoController extends Controller
        $empleado->update($request->all());
 
         return redirect()->route('empleados.index')
-            ->with('success', 'Empleado updated successfully');
+            ->with('success', 'Empleado editado correctamente');
     }
 
     /**
@@ -122,6 +122,6 @@ class EmpleadoController extends Controller
         $empleado = Empleado::find($id)->delete();
 
         return redirect()->route('empleados.index')
-            ->with('success', 'Empleado deleted successfully');
+            ->with('success', 'Empleado eliminado correctamente');
     }
 }

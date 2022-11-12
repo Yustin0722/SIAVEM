@@ -29,6 +29,7 @@ Route::resource('preventivos', App\Http\Controllers\PreventivoController::class)
 Route::resource('correctivos', App\Http\Controllers\CorrectivoController::class)->middleware('auth');
 Route::resource('estados', App\Http\Controllers\EstadoController::class)->middleware('auth');
 Route::resource('empleados', App\Http\Controllers\EmpleadoController::class)->middleware('auth');
+Route::resource('formularios', App\Http\Controllers\FormularioController::class)->middleware('auth');
 Auth::routes();
 
 
