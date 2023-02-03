@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Unidade
+    Motocicleta
 @endsection
 
 @section('content')
@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Unidades') }}
+                                {{ __('Chequeo Motocicleta') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('unidades.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
-                                  {{ __('Agregar Unidad') }}
+                                <a href="{{ route('motocicletas.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
+                                  {{ __('Agregar Nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -34,54 +34,61 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                     
-										<th>Categoría</th>
-										<th>Tracción</th>
-										<th>Combustible</th>
-										<th>Estado</th>
+                                       
 										<th>Placa</th>
-										<th>Marca</th>
-										<th>Modelo</th>
-										<th>Estilo</th>
-										<th>Color</th>
-										<th>Año fabricación</th>
-										<th>Contratacion</th>
-										<th>Valor Adquisitivo</th>
-										<th>Valor Hacienda</th>
-										<th>Rvt</th>
-										<th>Descripción</th>
-                                         <th>Acciones</th>
+										<th>Fecha</th>
+										<th>Kilometraje</th>
+										<th>Combustible</th>
+										<th>Luz baja</th>
+										<th>Luz alta</th>
+										<th>Luz marcha</th>
+										<th>Pito</th>
+										<th>Bateria</th>
+										<th>Nivel refrigeracion</th>
+										<th>Nivel aceite</th>
+										<th>Asientos</th>
+										<th>Permisos circulacion</th>
+										<th>Rtv</th>
+										<th>Titulo propiedad</th>
+										<th>Llanta delantera</th>
+										<th>Llanta trasera</th>
+										<th>Espejo retrovisor Derecho</th>
+										<th>Espejo retrovisor Izquierdo</th>
+                                        <th>Acciones</th>
+
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($unidades as $unidade)
+                                    @foreach ($motocicletas as $motocicleta)
                                         <tr>
-                                    
-											<td>{{ $unidade->categoria->nombre }}</td>
-
-											<td>{{ $unidade->traccione->nombreTraccion}}</td>
-											<td>{{ $unidade->combustible->nombreCombustibles }}</td>
-											<td>{{ $unidade->estado->nombreEstados}}</td>
-											<td>{{ $unidade->placa }}</td>
-											<td>{{ $unidade->marca }}</td>
-											<td>{{ $unidade->modelo }}</td>
-											<td>{{ $unidade->estilo }}</td>
-											<td>{{ $unidade->color }}</td>
-											<td>{{ $unidade->ayoFabricacion }}</td>
-											<td>{{ $unidade->contratacion }}</td>
-											<td>{{ $unidade->valorAdqui }}</td>
-											<td>{{ $unidade->valorHacienda }}</td>
-											<td>{{ $unidade->RVT }}</td>
-											<td>{{ $unidade->descripcion }}</td>
+                                          
+											<td>{{ $motocicleta->unidade->placa }}</td>
+											<td>{{ $motocicleta->FechaChequeoM }}</td>
+											<td>{{ $motocicleta->Kilometraje }}</td>
+											<td>{{ $motocicleta->Combustible }}</td>
+											<td>{{ $motocicleta->LuzBaja }}</td>
+											<td>{{ $motocicleta->LuzAlta }}</td>
+											<td>{{ $motocicleta->LuzMarcha }}</td>
+											<td>{{ $motocicleta->Pito }}</td>
+											<td>{{ $motocicleta->Bateria }}</td>
+											<td>{{ $motocicleta->NivelRefrigeracion }}</td>
+											<td>{{ $motocicleta->NivelAceite }}</td>
+											<td>{{ $motocicleta->Asientos }}</td>
+											<td>{{ $motocicleta->PermisosCirculacion }}</td>
+											<td>{{ $motocicleta->RTV }}</td>
+											<td>{{ $motocicleta->TituloPropiedad }}</td>
+											<td>{{ $motocicleta->LlantaDelantera }}</td>
+											<td>{{ $motocicleta->LlantaTrasera }}</td>
+											<td>{{ $motocicleta->EspejoRetrovisorD }}</td>
+											<td>{{ $motocicleta->EspejoRetrovisori }}</td>
 
                                             <td>
-                                                <form action="{{ route('unidades.destroy',$unidade->idUnidad) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('unidades.show',$unidade->idUnidad) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
-                                                    <a class="btn btn-sm btn-warning" href="{{ route('unidades.edit',$unidade->idUnidad) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('motocicletas.destroy',$motocicleta->idMotocicleta) }}" method="POST">
+                                                    <a class="btn btn-sm btn-warning" href="{{ route('motocicletas.edit',$motocicleta->idMotocicleta) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                   
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -128,7 +135,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $unidades->links() !!}
+                {!! $motocicletas->links() !!}
             </div>
         </div>
     </div>

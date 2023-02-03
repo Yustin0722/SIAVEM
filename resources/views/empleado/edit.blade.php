@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Empleado</span>
+                        <span class="card-title">Editar Empleado</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('empleados.update', $empleado->idEmpleados) }}"  role="form" enctype="multipart/form-data">
@@ -43,7 +43,7 @@
                         <label for="">Licencia <input type="checkbox" name="FotoLicencia" id="check" value="" onchange="javascript:showContent()" /> </label>
                         <div class="box-footer mt20">
                             <button type="submit" class="btn btn-primary">Enviar</button>
-                            <a class="btn btn-danger" href="{{ route('empleados.index') }}"> Atras</a>
+                            <a class="btn btn-danger" href="{{ route('empleados.index') }}"> Atrás</a>
                         </div>
                         </form>
                     </div>

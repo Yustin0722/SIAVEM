@@ -41,12 +41,13 @@
 										<th>Primer Apellido</th>
 										<th>Segundo Apellido</th>
 										<th>Fecha Nacimiento</th>
-										<th>Cedula</th>
-										<th>Telefono</th>
+										<th>Cedúla</th>
+										<th>Teléfono</th>
 										<th>Correo Institucional</th>
-										<th>Tipo Licencia</th>
+										<th>Código Licencia</th>
 										<th>Fecha Vencimiento</th>
 										<th>Foto Licencia</th>
+                                        <th>Acciones</th>
 
                                         <th></th>
                                     </tr>
@@ -64,10 +65,10 @@
 											<td>{{ $empleado->Cedula }}</td>
 											<td>{{ $empleado->Telefono }}</td>
 											<td>{{ $empleado->CorreoInstitucional }}</td>
-											<td>{{ $empleado->tlicencia->nombreTL }}</td>
+											<td>{{ $empleado->TL_id }}</td>
 											<td>{{ $empleado->FechaVencimiento }}</td>
 											<td>
-                                            <img src="{{ asset('storage').'/'.$empleado->FotoLicencia }}" width="150" alt=""> 
+                                            <img src="{{ asset('storage/app/public/uploads').'/'.$empleado->FotoLicencia }}" width="150" alt=""> 
                                             </td>
 
                                             <td>

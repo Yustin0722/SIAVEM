@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Categoria') }}
+                                {{ __('Categoría') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('categorias.create') }}" class="btn btn-success btn-sm float-right"  data-placement="left">
-                                  {{ __('Agregar Categoria') }}
+                                  {{ __('Agregar Categoría') }}
                                 </a>
                               </div>
                         </div>
@@ -34,7 +34,7 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                       
                                         
 										<th>Nombre</th>
                                         <th>Acciones</th>
@@ -44,7 +44,7 @@
                                 <tbody>
                                     @foreach ($categorias as $categoria)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                      
                                             
 											<td>{{ $categoria->nombre }}</td>
                                             

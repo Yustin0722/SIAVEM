@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $empleado->name ?? 'Show Empleado' }}
+    {{ $empleado->name ?? 'Mostrar Empleado' }}
 @endsection
 
 @section('content')
@@ -46,7 +46,7 @@
                             {{ $empleado->FechaNacimiento }}
                         </div>
                         <div class="form-group">
-                            <strong>Cedula:</strong>
+                            <strong>Cedúla:</strong>
                             {{ $empleado->Cedula }}
                         </div>
                         <div class="form-group">

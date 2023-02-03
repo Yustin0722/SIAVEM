@@ -13,7 +13,7 @@ Create Empleado
 
             <div class="card card-default">
                 <div class="card-header">
-                    <span class="card-title">Create Empleado</span>
+                    <span class="card-title">Agregar Empleado</span>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('empleados.store') }}" role="form" enctype="multipart/form-data">
@@ -27,12 +27,13 @@ Create Empleado
                                 {!! $errors->first('TL_id', '<div class="invalid-feedback">:message</div>') !!}
                             </div>
                             <div class="form-group">
-                                {{ Form::label('FechaVencimiento') }}
+                                {{ Form::label('Fecha Vencimiento') }}
                                 {{ Form::date('FechaVencimiento', $empleado->FechaVencimiento, ['class' => 'form-control' . ($errors->has('FechaVencimiento') ? ' is-invalid' : ''), 'placeholder' => 'Fechavencimiento']) }}
                                 {!! $errors->first('FechaVencimiento', '<div class="invalid-feedback">:message</div>') !!}
                             </div>
                             <br>
-                            <label for="FotoLicencia">FotoLicencia: </label>
+                            <label for="FotoLicencia">Foto Licencia: </label>
+                            <br/>
                             <img src="{{ asset('storage').'/'.$empleado->FotoLicencia }}" width="300" alt="">
                             <input type="file" name="FotoLicencia" value="" id="FotoLicencia">
                             <br>
@@ -40,9 +41,13 @@ Create Empleado
                             </br>
                         </div>
                         <label for="">Licencia <input type="checkbox" name="FotoLicencia" id="check" value="" onchange="javascript:showContent()" /> </label>
+                        
+
+
+                        
                         <div class="box-footer mt20">
                             <button type="submit" class="btn btn-primary">Enviar</button>
-                            <a class="btn btn-danger" href="{{ route('empleados.index') }}"> Atras</a>
+                            <a class="btn btn-danger" href="{{ route('empleados.index') }}"> Atrás</a>
                         </div>
                     </form>
                 </div>

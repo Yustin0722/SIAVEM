@@ -99,7 +99,7 @@ class FormularioController extends Controller
         $formulario->update($request->all());
 
         return redirect()->route('formularios.index')
-            ->with('success', 'Formulario updated successfully');
+            ->with('success', 'Formulario editado correctamente');
     }
 
     /**
@@ -112,9 +112,6 @@ class FormularioController extends Controller
         $formulario = Formulario::find($id)->delete();
 
         return redirect()->route('formularios.index')
-            ->with('success', 'Formulario deleted successfully');
+            ->with('success', 'Formulario eliminado correctamente');
     }
 }
-
-
-

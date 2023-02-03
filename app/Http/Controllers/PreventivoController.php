@@ -53,7 +53,7 @@ class PreventivoController extends Controller
         $preventivo = Preventivo::create($request->all());
 
         return redirect()->route('preventivos.index')
-            ->with('success', 'Preventivo created successfully.');
+            ->with('success', 'Preventivo creado correctamente.');
     }
 
     /**
@@ -97,7 +97,7 @@ class PreventivoController extends Controller
         $preventivo->update($request->all());
 
         return redirect()->route('preventivos.index')
-            ->with('success', 'Preventivo updated successfully');
+            ->with('success', 'Preventivo editado correctamente');
     }
 
     /**
@@ -110,6 +110,6 @@ class PreventivoController extends Controller
         $preventivo = Preventivo::find($id)->delete();
 
         return redirect()->route('preventivos.index')
-            ->with('success', 'Preventivo deleted successfully');
+            ->with('success', 'Preventivo eliminado correctamente');
     }
 }

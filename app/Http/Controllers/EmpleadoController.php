@@ -51,7 +51,7 @@ class EmpleadoController extends Controller
 
         $empleado  = request()->except('_token');
         if($request->hasFile('FotoLicencia')){
-            $empleado ['FotoLicencia']=$request->file('FotoLicencia')->store('imagen','public');
+            $empleado ['FotoLicencia']=$request->file('FotoLicencia')->store('uploads','public');
             
          } 
         Empleado::insert($empleado);
@@ -101,7 +101,7 @@ class EmpleadoController extends Controller
        if($request->hasFile('FotoLicencia')){
         $empleado =Empleado::findOrFail($id);
        // Storage::delete('public/'.$licencia->FotoLicencia);
-       $empleado['FotoLicencia']=$request->file('FotoLicencia')->store('imagen','public');
+       $empleado['FotoLicencia']=$request->file('FotoLicencia')->store('uploads','public');
         
      }
      Empleado::where('idEmpleado','=',$id)->update($empleado);

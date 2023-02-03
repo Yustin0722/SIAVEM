@@ -45,7 +45,9 @@
 										<th>Fecha Regreso</th>
 										<th>Lugar</th>
 										<th>Itinerario</th>
+                                        <th>Chofer</th>
 										<th>Observaciones</th>
+                                        <th>Acciones</th>
 
                                         <th></th>
                                     </tr>
@@ -64,6 +66,7 @@
 											<td>{{ $formulario->FechaRegreso }}</td>
 											<td>{{ $formulario->Lugar }}</td>
 											<td>{{ $formulario->Itinerario }}</td>
+                                            <td>{{ $formulario->empleado->Cedula }}</td>
 											<td>{{ $formulario->Observaciones }}</td>
 
                                             <td>

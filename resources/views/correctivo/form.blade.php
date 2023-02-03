@@ -32,7 +32,7 @@
             {!! $errors->first('Detalle', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Monto') }}
+            {{ Form::label('Montó') }}
             {{ Form::text('Monto', $correctivo->Monto, ['class' => 'form-control' . ($errors->has('Monto') ? ' is-invalid' : ''), 'placeholder' => 'Digite el monto']) }}
             {!! $errors->first('Monto', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -40,7 +40,7 @@
         </br>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <a class="btn btn-danger" href="{{ route('correctivos.index') }}"> Atras</a>
+        <a class="btn btn-danger" href="{{ route('correctivos.index') }}"> Atrás</a>
 
     </div>
 </div>

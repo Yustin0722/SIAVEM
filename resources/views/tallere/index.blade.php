@@ -35,12 +35,12 @@
                                 <thead class="thead">
                                     <tr>
                                        
-										<th>Numero Contratacion</th>
+										<th>Código de Contratación</th>
 										<th>Nombre Taller</th>
-										<th>Direccion </th>
-										<th>Descripcion Especialidad</th>
+										<th>Dirección </th>
+										<th>Descripción Especialidad</th>
 										<th>Fecha de Vencimiento </th>
-
+                                        <th>Acciones</th>
                                         <th></th>
                                     </tr>
                                 </thead>

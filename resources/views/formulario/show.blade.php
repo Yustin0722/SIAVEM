@@ -14,51 +14,50 @@
                             <span class="card-title">Mostrar Solicitud</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('formularios.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('formularios.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Codigo Solicitud:</strong>
+                            <strong>Idformularios:</strong>
                             {{ $formulario->idFormularios }}
                         </div>
                         <div class="form-group">
-                            <strong>Vehiculo:</strong>
-                            {{ $formulario->categoria->nombre }}
+                            <strong>Categoria Id:</strong>
+                            {{ $formulario->categoria_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Departamento:</strong>
-                            {{ $formulario->departamento->nombreDepa }}
+                            <strong>Depar Id:</strong>
+                            {{ $formulario->depar_id }}
                         </div>
                         <div class="form-group">
-                            <strong>Responsable de la Gira:</strong>
-                            {{ $formulario->empleado->Cedula}}
+                            <strong>Emple Id:</strong>
+                            {{ $formulario->emple_id }}
                         </div>
                         <div class="form-group">
                             <strong>Objetivo:</strong>
                             {{ $formulario->Objetivo }}
                         </div>
                         <div class="form-group">
-                            <strong>Numero Personas:</strong>
+                            <strong>Numepersonas:</strong>
                             {{ $formulario->NumePersonas }}
                         </div>
                         <div class="form-group">
-                            <strong>Fecha Salida:</strong>
+                            <strong>Fechasalida:</strong>
                             {{ $formulario->FechaSalida }}
                         </div>
-                         <div class="form-group">
-                            <strong>Horas Salida:</strong>
+                        <div class="form-group">
+                            <strong>Fecharegreso:</strong>
+                            {{ $formulario->FechaRegreso }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Horas:</strong>
                             {{ $formulario->HoraS }}
                         </div>
                         <div class="form-group">
-                            <strong>Fecha Regreso:</strong>
-                            {{ $formulario->FechaRegreso }}
-                        </div>
-                       
-                        <div class="form-group">
-                            <strong>Horar Regreso:</strong>
+                            <strong>Horar:</strong>
                             {{ $formulario->HoraR }}
                         </div>
                         <div class="form-group">
@@ -72,6 +71,10 @@
                         <div class="form-group">
                             <strong>Observaciones:</strong>
                             {{ $formulario->Observaciones }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Chofer:</strong>
+                            {{ $formulario->chofer }}
                         </div>
 
                     </div>

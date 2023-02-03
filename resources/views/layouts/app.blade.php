@@ -22,9 +22,9 @@
 </head>
 
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-success shadow-sm">
-
+    <div id="app" >
+        <nav class="navbar navbar-expand-md navbar-light bg-success shadow-sm"  >
+ 
             <div class="container">
          
             <a class="navbar-brand" href="#">
@@ -52,18 +52,17 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
 
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto" >
                    
-
-
-                        <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Usuario
+                             <b>   Agregar </b> 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                <a class="dropdown-item" href="{{ route('departamentos.index') }}">Departamento</a>
-                                <a class="dropdown-item" href="{{ route('puestos.index') }}">Puestos</a>
-                                <a class="dropdown-item" href="{{ route('empleados.index') }}">Empleados</a>
+                            <a class="nav-link" href="{{ route('estados.index') }}"><b>{{ __('Estados') }}</b> </a>
+                            <a class="nav-link" href="{{ route('tlicencias.index') }}"><b>{{ __('Tipo Licencia') }}</b> </a>
+                            <a class="nav-link" href="{{ route('combustibles.index') }}"><b>{{ __('Tipo Combustibles') }}</b> </a>
+                            <a class="nav-link" href="{{ route('tracciones.index') }}"><b>{{ __('Tipo Traccion') }}</b> </a>
                            
 
                             </div>
@@ -71,35 +70,60 @@
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Vehiculos
+                             <b>   Usuarios</b> 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                <a class="dropdown-item" href="{{ route('categorias.index') }}">Categorias</a>
-                                <a class="dropdown-item" href="{{ route('unidades.index') }}">Unidades</a>
+                                <a class="dropdown-item" href="{{ route('departamentos.index') }}"> <b> Departamento</b> </a>
+                                <a class="dropdown-item" href="{{ route('empleados.index') }}"> <b>Empleados</b> </a>
+                           
 
-                                
                             </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('formularios.index') }}">{{ __('Solicitud Gira') }}</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('talleres.index') }}">{{ __('Talleres') }}</a>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Mantenimientos
+                            <b>Vehiculos</b>   
+                          
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                                <a class="dropdown-item" href="{{ route('preventivos.index') }}">Preventivos</a>
-                                <a class="dropdown-item" href="{{ route('correctivos.index') }}">Correctivos</a>
+                                <a class="dropdown-item" href="{{ route('categorias.index') }}"><b>Categorias</b></a>
+                                <a class="dropdown-item" href="{{ route('unidades.index') }}"><b>Unidades</b></a>
+
+                                
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('formularios.index') }}"><b>{{ __('Solicitud Gira') }}</b> </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('talleres.index') }}"><b>{{ __('Talleres') }}</b> </a>
+                        </li>
+                     
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <b>Mantenimientos</b>    
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <a class="dropdown-item" href="{{ route('preventivos.index') }}"><b>Preventivos</b> </a>
+                                <a class="dropdown-item" href="{{ route('correctivos.index') }}"><b>Correctivos</b> </a>
 
 
                             </div>
                         </li>
 
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <b>Chequeo Vehiculos</b>   
+                          
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                <a class="dropdown-item" href="{{ route('motocicletas.index') }}"><b>Motocicletas</b></a>
+                                <a class="dropdown-item" href="{{ route('chequeos.index') }}"><b>Unidades</b></a>
+
+                                
+                            </div>
+                        </li>
                     </ul>
 
 
@@ -124,13 +148,13 @@
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
+                              <b>{{ Auth::user()->name }}</b>  
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Salir') }}
+                                   <b>{{ __('Salir') }}</b> 
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

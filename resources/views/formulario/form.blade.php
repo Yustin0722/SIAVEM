@@ -62,6 +62,12 @@
             {{ Form::text('Itinerario', $formulario->Itinerario, ['class' => 'form-control' . ($errors->has('Itinerario') ? ' is-invalid' : ''), 'placeholder' => 'Itinerario']) }}
             {!! $errors->first('Itinerario', '<div class="invalid-feedback">:message</div>') !!}
         </div>
+
+        <div class="form-group">
+            {{ Form::label('chofer') }}
+            {{ Form::select('chofer',$empleados  ,$formulario->chofer, ['class' => 'form-control' . ($errors->has('chofer') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione']) }}
+            {!! $errors->first('chofer', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
         <div class="form-group">
             {{ Form::label('Observaciones') }}
             {{ Form::text('Observaciones', $formulario->Observaciones, ['class' => 'form-control' . ($errors->has('Observaciones') ? ' is-invalid' : ''), 'placeholder' => 'Observaciones']) }}

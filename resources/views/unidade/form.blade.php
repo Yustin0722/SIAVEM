@@ -2,12 +2,12 @@
     <div class="box-body">
         
     <div class="form-group">
-            {{ Form::label('categoria') }}
+            {{ Form::label('categoría') }}
             {{ Form::select('categoria_id',$categorias ,$unidade->categoria_id, ['class' => 'form-control' . ($errors->has('categoria_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione ']) }}
             {!! $errors->first('categoria_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('traccion') }}
+            {{ Form::label('tracción') }}
             {{ Form::select('tracciones_id',$tracciones,$unidade->tracciones_id, ['class' => 'form-control' . ($errors->has('tracciones_id') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione ']) }}
             {!! $errors->first('tracciones_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -47,12 +47,12 @@
             {!! $errors->first('color', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('año Fabricacion') }}
+            {{ Form::label('año Fabricación') }}
             {{ Form::text('ayoFabricacion', $unidade->ayoFabricacion, ['class' => 'form-control' . ($errors->has('ayoFabricacion') ? ' is-invalid' : ''), 'placeholder' => 'Digite con numeros el año de fabricacion']) }}
             {!! $errors->first('ayoFabricacion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('contratacion') }}
+            {{ Form::label('contratación') }}
             {{ Form::text('contratacion', $unidade->contratacion, ['class' => 'form-control' . ($errors->has('contratacion') ? ' is-invalid' : ''), 'placeholder' => 'Digite la cantidad de la contracion o 0 si no cuenta']) }}
             {!! $errors->first('contratacion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -72,14 +72,14 @@
             {!! $errors->first('RVT', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('descripcion') }}
+            {{ Form::label('descripción') }}
             {{ Form::text('descripcion', $unidade->descripcion, ['class' => 'form-control' . ($errors->has('descripcion') ? ' is-invalid' : ''), 'placeholder' => 'Descripcion de la Unidad']) }}
             {!! $errors->first('descripcion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         </br>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <a class="btn btn-danger" href="{{ route('unidades.index') }}"> Atras</a>
+        <a class="btn btn-danger" href="{{ route('unidades.index') }}"> Atrás</a>
 
     </div>
 </div>

@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Estado extends Model
 {
+  protected $primaryKey = 'idEstados';
     
     static $rules = [
 

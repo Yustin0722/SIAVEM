@@ -40,7 +40,7 @@
 										<th>Tipo Mantenimiento</th>
 										<th>Horimetro</th>
 										<th>Proximo Servicio</th>
-										<th>Monto</th>
+										<th>Montó</th>
                                         <th>Acciones</th>
 
 

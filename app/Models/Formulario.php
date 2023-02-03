@@ -20,6 +20,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $Lugar
  * @property $Itinerario
  * @property $Observaciones
+ * @property $chofer
  * @property $created_at
  * @property $updated_at
  *
@@ -32,8 +33,9 @@ use Illuminate\Database\Eloquent\Model;
 class Formulario extends Model
 {
     protected $primaryKey = 'idFormularios';
+
     static $rules = [
-		
+	
 		'categoria_id' => 'required',
 		'depar_id' => 'required',
 		'emple_id' => 'required',
@@ -54,7 +56,7 @@ class Formulario extends Model
      *
      * @var array
      */
-    protected $fillable = ['idFormularios','categoria_id','depar_id','emple_id','Objetivo','NumePersonas','FechaSalida','FechaRegreso','HoraS','HoraR','Lugar','Itinerario','Observaciones'];
+    protected $fillable = ['idFormularios','categoria_id','depar_id','emple_id','Objetivo','NumePersonas','FechaSalida','FechaRegreso','HoraS','HoraR','Lugar','Itinerario','Observaciones','chofer'];
 
 
     /**

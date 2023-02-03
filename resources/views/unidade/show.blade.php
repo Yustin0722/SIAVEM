@@ -22,11 +22,11 @@
                         
                       
                         <div class="form-group">
-                            <strong>Categoria:</strong>
+                            <strong>Categoría:</strong>
                             {{ $unidade->categoria->nombre  }}
                         </div>
                         <div class="form-group">
-                            <strong>Traccion:</strong>
+                            <strong>Tracción:</strong>
                             {{ $unidade->traccione->nombreTraccion }}
                         </div>
                         <div class="form-group">
@@ -58,11 +58,11 @@
                             {{ $unidade->color }}
                         </div>
                         <div class="form-group">
-                            <strong>Año fabricacion:</strong>
+                            <strong>Año fabricación:</strong>
                             {{ $unidade->ayoFabricacion }}
                         </div>
                         <div class="form-group">
-                            <strong>Contratacion:</strong>
+                            <strong>Contratación:</strong>
                             {{ $unidade->contratacion }}
                         </div>
                         <div class="form-group">
@@ -78,7 +78,7 @@
                             {{ $unidade->RVT }}
                         </div>
                         <div class="form-group">
-                            <strong>Descripcion:</strong>
+                            <strong>Descripción:</strong>
                             {{ $unidade->descripcion }}
                         </div>
 

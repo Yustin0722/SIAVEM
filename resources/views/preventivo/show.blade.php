@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Preventivo</span>
+                            <span class="card-title">Mostrar Mantenimiento Preventivo</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('preventivos.index') }}"> Back</a>

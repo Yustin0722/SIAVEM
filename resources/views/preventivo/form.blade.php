@@ -17,7 +17,7 @@
             {!! $errors->first('FechaMant', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('tipoMante') }}
+            {{ Form::label('tipo Mantenimiento') }}
             {{ Form::text('tipoMante', $preventivo->tipoMante, ['class' => 'form-control' . ($errors->has('tipoMante') ? ' is-invalid' : ''), 'placeholder' => 'Digite el tipo de mantenimiento']) }}
             {!! $errors->first('tipoMante', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -32,7 +32,7 @@
             {!! $errors->first('ProximoSer', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Monto') }}
+            {{ Form::label('Montó') }}
             {{ Form::text('Monto', $preventivo->Monto, ['class' => 'form-control' . ($errors->has('Monto') ? ' is-invalid' : ''), 'placeholder' => 'Monto']) }}
             {!! $errors->first('Monto', '<div class="invalid-feedback">:message</div>') !!}
         </div>

@@ -2,7 +2,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div style="background: url('images/login.jpg') no-repeat; background-size:cover">
+
+<body background="images/Fondo.jpeg">
+  
 <div class="container">
 
     <div class="row justify-content-center"  >
@@ -26,5 +28,7 @@
     </div>
     <div style=" max-width: 1000px; height: 350px; "></div>
 </div>
-</div>
+
+</body>
+
 @endsection

@@ -34,20 +34,16 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
-                                        
-										<th>Id</th>
+                                  
 										<th>Nombre Departamento</th>
-
+                                        <th>Acciones</th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($departamentos as $departamento)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
                                             
-											<td>{{ $departamento->idDepartamento }}</td>
 											<td>{{ $departamento->nombreDepa }}</td>
 
                                             <td>

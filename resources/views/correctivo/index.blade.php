@@ -40,7 +40,7 @@
 										<th>Fecha Reingreso</th>
 										<th>Horimetro</th>
 										<th>Detalle</th>
-										<th>Monto</th>
+										<th>Montó</th>
                                         <th>Acciones</th>
 
                                         <th></th>

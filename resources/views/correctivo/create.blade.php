@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Correctivo</span>
+                        <span class="card-title">Agregar Mantenimiento Correctivo</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('correctivos.store') }}"  role="form" enctype="multipart/form-data">
